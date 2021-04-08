@@ -1,0 +1,33 @@
+section {
+
+    &#urlForm, &#textForm {
+        display: none;
+    }
+    form {
+        border: 1px solid #cacaca;
+        border-radius: 3px;
+        padding: 40px;
+
+        textarea {
+            border: 1px solid #cacaca;
+            border-radius: 4px;
+            &::placeholder {
+                padding: 10px;
+            }
+        }
+        input {
+            border: 1px solid #cacaca;
+            border-radius: 4px;
+            padding: 10px 20px;
+            width: 100%;
+            line-height: 16px;
+            margin: 10px 0;
+            &[type="submit"] {
+                border: none;
+                font-weight: bold;
+                color: white;
+                background-color: #008CBA;
+            }
+        }
+    }
+}

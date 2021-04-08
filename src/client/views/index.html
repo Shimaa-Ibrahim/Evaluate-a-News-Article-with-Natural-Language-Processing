@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Test</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="">
+        Logo
+      </div>
+      <div class="">
+        navigation
+      </div>
+    </header>
+
+    <main>
+      <h1>
+        Evaluate a News Article with Natural Language Processing
+      </h1>
+      <!-- buttons -->
+      <section id="btns">
+        <button type="button" id="url" onclick="return Client.clickURLButton()">
+          URL
+        </button>
+        <button
+          type="button"
+          id="text"
+          onclick="return Client.clickTextButton()"
+        >
+          Text
+        </button>
+      </section>
+
+      <!-- url form -->
+      <section id="urlForm">
+        <form class="" onsubmit="return Client.handleSubmit(event, 'urlInput', 'url')">
+          <input
+            id="urlInput"
+            type="url"
+            placeholder="Enter vaild URL.."
+          />
+
+          <input
+            type="submit"
+            value="submit"
+            onclick="return Client.handleSubmit(event,'urlInput','url')"
+            onsubmit="return Client.handleSubmit(event,'urlInput','url')"
+          />
+          <p><small>Note: After submission, please wait until results..</small></p>
+        </form>
+      </section>
+
+      <!-- text form -->
+      <section id="textForm">
+        <form class="" onsubmit="return Client.handleSubmit(event,'textarea','txt')">
+          <textarea
+            id="textarea"
+            cols="89"
+            rows="5"
+            placeholder="Enter your text...."
+          ></textarea>
+          <input
+            type="submit"
+            value="submit"
+            onclick="return Client.handleSubmit(event,'textarea', 'txt')"
+            onsubmit="return Client.handleSubmit(event,'textarea', 'txt')"
+          />
+          <p><small>Note: After submission, please wait until results..</small></p>
+        </form>
+      </section>
+
+      <!-- results -->
+      <section id="results">
+        <p>
+          <strong>RESULTS</strong>
+        </p>
+        <div id="res"> 
+
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>This is a footer</p>
+    </footer>
+    <script>
+        // Check that service workers are supported
+        if ('serviceWorker' in navigator) {
+            // Use the window load event to keep the page load performant
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+  </body>
+</html>

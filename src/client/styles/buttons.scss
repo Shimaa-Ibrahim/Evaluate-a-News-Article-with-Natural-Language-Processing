@@ -1,0 +1,43 @@
+h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: xx-large;
+    text-align: center;
+    color: darkblue;
+}
+
+#btns{
+    text-align: center;
+
+    button {
+        border: none;
+        border-radius: 4px;
+        color: white;
+        padding: 12px 45px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 4px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+
+        &#url {
+            background-color: #008CBA;
+        }
+        &#text {
+            background-color: #f44336;
+        }
+
+        &#url:hover{
+            border: 2px solid #008CBA;
+            background-color: white;
+            color: #008CBA;
+        }
+
+        &#text:hover{
+            border: 2px solid #f44336;
+            background-color: white;
+            color: #f44336;
+        }
+    }
+}
